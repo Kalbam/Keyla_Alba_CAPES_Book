@@ -3,6 +3,7 @@ name: deploy-book
 on:
   push:
     branches:
+      - master
       - main
 
 permissions:
@@ -15,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,13 +36,16 @@ jobs:
           jupyter-book build .
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
 
   deploy:
-    needs: build
+    needs: build-and-deploy
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
