@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Cap_1_Intr_Proyect 
+- file: Cap_2_Data_INMET_NASA
+- file: Cap_3_Data_INMET_NASA
+- file: Cap_4_INP_INMET 
+- file: Cap_5_INP_NASA    
+- file: Cap_6_EDA_INMET

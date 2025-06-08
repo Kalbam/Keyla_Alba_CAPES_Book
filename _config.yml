@@ -1,0 +1,29 @@
+title: Forecasting Solar Radiation Using a Stacked Wavelet Transform-Based Machine Learning Model
+
+author: MSc. Keyla Alba Molina
+logo: logo_CAPES.png
+
+
+execute:
+  execute_notebooks: force
+
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  
+  path_to_book: docs  
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
